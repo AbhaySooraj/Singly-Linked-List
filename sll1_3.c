@@ -20,7 +20,7 @@ void main()
 	};
 	struct node *head=NULL,*pos=NULL,*tail=NULL;
 	
-	int ch, enter,count=0,search,number=1000,i;
+	int ch, enter,count=0,search,number=10000,i;
 	while(1)
 	{
 		printf("\n 1:Insert \n 2:Display \n 3:Count \n 4:Search an element\n 5:Exit ");
@@ -34,7 +34,7 @@ void main()
 					if(head==NULL)
 					{
 						head=(struct node *)malloc(sizeof(struct node));
-						head->data=rand()%100;
+						head->data=rand()%10000;
 						pos=head;
 						tail=head;
 					}
@@ -43,7 +43,7 @@ void main()
 					{
 						tail->next=(struct node *)malloc(sizeof(struct node));
 						tail=tail->next;
-						tail->data=rand()%100;
+						tail->data=rand()%10000;
 					}
 				}
 				break;
